@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="prism.css">
+        <script src="prism.js"></script>
+        <link rel="stylesheet" href="style.css">
+    <title>JavaScript Cheatsheet by Anjul</title>
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="copy.png" alt=""></span>
+        <div class="content center">
+            JavaScript CheaTsheet By Anjul !!
+        </div>
+    </nav>
+    <div class="container">
+        <ol>
+            <li><b>Console</b> 
+                <pre class="language-js"><code>// => Hello world!
+console.log('Hello world!');
+                    </code></pre></li>
+
+            <li><b>Numbers</b> 
+    <pre class="language-js"><code>let amount = 6;
+let price = 4.99;
+        </code></pre>
+
+            </li> 
+            <li><b>Variables</b> 
+                <pre class="language-js"><code>let x = null;
+let name = "Tammy";
+const found = false;
+                    
+// => Tammy, false, null
+console.log(name, found, x);
+                    
+ var a;
+console.log(a); // => undefined
+</code></pre>
+            </li>
+
+            <li><b>Strings</b>  
+                <pre class="language-js"><code>let single = 'Wheres my bandit hat?';
+let double = "Wheres my bandit hat?";
+                    
+ // => 21
+console.log(single.length);</code></pre>
+            </li> 
+
+            <li><b>Arthmetic Operators</b>
+                <pre class="language-js"><code>5 + 5 = 10     // Addition
+10 - 5 = 5     // Subtraction
+5 * 10 = 50    // Multiplication
+10 / 5 = 2     // Division
+10 % 5 = 0     // Modulo
+</code></pre>
+            </li> 
+
+            <li><b>Strings Interpolation</b> 
+                <pre class="language-js"><code>let age = 7
+ // String concatenation
+'Tommy is ' + age + ' years old.';
+                    
+// String interpolation
+`Tommy is ${age} years old.`;
+                    </code></pre>
+            </li> 
+
+
+            <li><b>Operators</b> 
+                <pre class="language-js"><code>true || false;       // true
+10 > 5 || 10 > 20;   // true
+false || false;      // false
+10 > 100 || 10 > 20; // false
+                    </code></pre>
+            </li>
+
+            <li><b>Logical Operators&&</b> 
+                <pre class="language-js"><code>true && true;        // true
+1 > 2 && 2 > 1;      // false
+true && false;       // false
+4 === 4 && 3 > 1;    // true
+                    </code></pre>
+            </li>
+
+            <li><b>Comparison Operators</b> 
+                <pre class="language-js"><code>1 > 3                // false
+3 > 1                // true
+250 >= 250           // true
+1 === 1              // true
+1 === 2              // false
+1 === '1'            // false
+                    </code></pre>
+            </li>
+
+            <li><b>Logical Operators!</b> 
+                <pre class="language-js"><code>let lateToWork = true;
+let oppositeValue = !lateToWork;
+                    
+// => false
+console.log(oppositeValue); 
+                    </code></pre>
+            </li>
+
+            <li><b>Nullish coalescing operator ??</b> 
+                <pre class="language-js">null ?? 'I win';           //  'I win'
+undefined ?? 'Me too';     //  'Me too'
+false ?? 'I lose'          //  false
+0 ?? 'I lose again'        //  0
+'' ?? 'Damn it'            //  ''
+                    <code> </code></pre>
+            </li>
+
+            <li><b>Ternary Operators</b> 
+                <pre class="language-js"><code>var x=1;
+// => true
+result = (x == 1) ? true : false;
+                    </code></pre>
+            </li>
+
+            <li><b>If Statement</b> 
+                <pre class="language-js"><code>const isMailSent = true;
+
+if (isMailSent) {
+  console.log('Mail sent to recipient');
+}
+                    </code></pre>
+            </li>
+
+            <li><b>Else If</b>
+                <pre class="language-js"><code>const size = 10;
+
+if (size > 100) {
+  console.log('Big');
+} else if (size > 20) {
+  console.log('Medium');
+} else if (size > 4) {
+  console.log('Small');
+} else {
+  console.log('Tiny');
+}
+// Print: Small
+                    </code></pre>
+            </li>
+
+            <li><b>Switch Statement</b> 
+                <pre class="language-js"><code>const food = 'salad';
+
+switch (food) {
+  case 'oyster':
+    console.log('The taste of the sea');
+    break;
+  case 'pizza':
+    console.log('A delicious pie');
+    break;
+  default:
+    console.log('Enjoy your meal');
+}
+                    </code></pre>
+            </li>
+
+            <li><b>==VS===</b> 
+                <pre class="language-js"><code>0 == false   // true
+0 === false  // false, different type
+1 == "1"     // true,  automatic type conversion 
+1 === "1"    // false, different type
+null == undefined  // true
+null === undefined // false
+'0' == false       // true
+'0' === false      // false
+                    </code></pre>
+            </li>
+
+            <li><b>Functions</b> 
+                <pre class="language-js"><code>// Defining the function:
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+// Calling the function:
+sum(3, 6); // 9
+ </code></pre>
+            </li>
+
+            <li><b>Anonymous Functions</b> 
+                <pre class="language-js"><code> // Named function
+function rocketToMars() {
+  return 'BOOM!';
+}
+
+// Anonymous function
+const rocketToMars = function() {
+  return 'BOOM!';
+}
+</code></pre>
+            </li>
+
+            <li><b>Return Function</b> 
+                <pre class="language-js"><code> // With return
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+// The function doesn't output the sum
+function sum(num1, num2) {
+  num1 + num2;
+}
+</code></pre>
+            </li>
+
+            <li><b>Calling Functions</b> 
+                <pre class="language-js"><code> // Defining the function
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+// Calling the function
+sum(2, 4); // 6
+</code></pre>
+            </li>
+
+            <li><b>Function Expression</b> 
+                <pre class="language-js"><code> const dog = function() {
+  return 'Woof!';
+}
+</code></pre>
+            </li>
+
+            <li><b>Function Parameters</b> 
+                <pre class="language-js"><code> // The parameter is name
+function sayHello(name) {
+  return `Hello, ${name}!`;
+}
+</code></pre>
+            </li>
+
+            <li><b>Function Declarations</b> 
+                <pre class="language-js"><code> function add(num1, num2) {
+  return num1 + num2;
+}
+</code></pre>
+            </li>
+
+            <li><b>Arrow Functions</b>: With two Arguments 
+                <pre class="language-js"><code> const sum = (param1, param2) => { 
+  return param1 + param2; 
+}; 
+console.log(sum(2,5)); // => 7 
+</code></pre>
+            </li>
+
+            <li><b>With No Arguments</b> 
+                <pre class="language-js"><code> const printHello = () => { 
+  console.log('hello'); 
+}; 
+printHello(); // => hello
+</code></pre>
+            </li>
+
+            <li><b>With a single argument</b>
+                <pre class="language-js"><code> const checkWeight = weight => { 
+  console.log(`Weight : ${weight}`); 
+}; 
+checkWeight(25); // => Weight : 25 
+</code></pre>
+            </li>
+
+            <li><b>Concise Arrow Function</b> 
+                <pre class="language-js"><code> const multiply = (a, b) => a * b; 
+// => 60 
+console.log(multiply(2, 30)); 
+</code></pre>
+            </li>
+
+            <li><b>Scope</b> 
+                <pre class="language-js"><code> function myFunction() {
+  
+  var pizzaName = "Margarita";
+  // Code here can use pizzaName
+  
+}
+
+// Code here can't use pizzaName
+</code></pre>
+            </li>
+
+            <li><b>Blocked Scoped Variable</b> 
+                <pre class="language-js"><code> const isLoggedIn = true;
+
+if (isLoggedIn == true) {
+  const statusMessage = 'Logged in.';
+}
+
+// Uncaught ReferenceError...
+console.log(statusMessage);
+
+</code></pre>
+            </li>
+
+            <li><b>Global variables</b> 
+                <pre class="language-js"><code>// Variable declared globally
+const color = 'blue';
+                    
+function printColor() {
+      console.log(color);
+}
+                    
+printColor(); // => blue</code></pre>
+            </li>
+
+            <li><b>Let Vs Var</b> 
+                <pre class="language-js"><code>for (let i = 0; i < 3; i++) {
+// This is the Max Scope for 'let'
+// i accessible ✔️
+ }
+// i not accessible ❌
+---------------------------------------------------------------------------------------------
+for (var i = 0; i < 3; i++) {
+    // i accessible ✔️
+  }
+  // i accessible ✔️ </code></pre>
+            </li>
+
+            <li><b>Loops With Closures</b> 
+                <pre class="language-js"><code>// Prints 3 thrice, not what we meant.
+for (var i = 0; i < 3; i++) {
+  setTimeout(_ => console.log(i), 10);
+}
+---------------------------------------------------------------------------------------------
+// Prints 0, 1 and 2, as expected.
+for (let j = 0; j < 3; j++) { 
+  setTimeout(_ => console.log(j), 10);
+}
+</code></pre>
+            </li>
+
+            <li><b>JavaScript Arrays</b> 
+                <pre class="language-js"><code> const fruits = ["apple", "orange", "banana"];
+// Different data types
+const data = [1, 'chicken', false];
+
+//property.length()
+const numbers = [1, 2, 3, 4];
+numbers.length // 4
+
+//Index
+// Accessing an array element
+const myArray = [100, 200, 300];
+
+console.log(myArray[0]); // 100
+console.log(myArray[1]); // 200
+
+//Mutable chart 
+        add	    remove	    start	    end
+push	✔			                    ✔
+pop		          ✔	                    ✔
+unshift	✔	                 ✔	
+shift	          ✔	         ✔
+
+//Method.Push()
+// Adding a single element:
+const cart = ['apple', 'orange'];
+cart.push('pear'); 
+
+// Adding multiple elements:
+const numbers = [1, 2];
+numbers.push(3, 4, 5);
+
+//Method.pop()
+const fruits = ["apple", "orange", "banana"];
+const fruit = fruits.pop(); // 'banana'
+console.log(fruits); // ["apple", "orange"]
+
+//Method.shift()
+let cats = ['Bob', 'Willy', 'Mini'];
+cats.shift(); // ['Willy', 'Mini']
+
+//Method.unshift()
+let cats = ['Bob'];
+
+// => ['Willy', 'Bob']
+cats.unshift('Willy');
+
+// => ['Puff', 'George', 'Willy', 'Bob']
+cats.unshift('Puff', 'George');
+
+//Method.concat()
+const numbers = [3, 2, 1]
+const newFirstNumber = 4
+    
+// => [ 4, 3, 2, 1 ]
+[newFirstNumber].concat(numbers)
+    
+// => [ 3, 2, 1, 4 ]
+numbers.concat(newFirstNumber)
+</code></pre>
+            </li>
+
+            <li><b>JavaScript Loops:</b> While Loops 
+                <pre class="language-js"><code> while (condition) {
+  // code block to be executed
+}
+
+let i = 0;
+while (i < 5) {        
+  console.log(i);
+  i++;
+}
+
+//For loops
+for (let i = 0; i < 4; i += 1) {
+  console.log(i);
+};
+
+// => 0, 1, 2, 3</code></pre>
+            </li>
+
+            <li><b>Reverse Loops</b> 
+                <pre class="language-js"><code>const fruits = ["apple", "orange", "banana"];
+
+for (let i = fruits.length - 1; i >= 0; i--) {
+  console.log(`${i}. ${fruits[i]}`);
+}
+                    
+// => 2. banana
+// => 1. orange
+// => 0. apple
+                    </code></pre>
+            </li>
+
+            <li><b>Do... While State</b> 
+                <pre class="language-js"><code> x = 0
+i = 0
+                    
+do {
+  x = x + i;
+  console.log(x)
+  i++;
+} while (i < 5);
+// => 0 1 3 6 10</code></pre>
+            </li>
+            <li><b>Looping Through Arrays</b> 
+                <pre class="language-js"><code>for (let i = 0; i < array.length; i++){
+  console.log(array[i]);
+}
+                  
+// => Every item in the array</code></pre>
+            </li>
+
+            <li><b>Continue</b>
+                <pre class="language-js"><code> for (i = 0; i < 10; i++) {
+  if (i === 3) { continue; }
+  text += "The number is " + i + "<br>";
+}</code></pre>
+            </li>
+
+            <li><b>Nested</b> 
+                <pre class="language-js"><code> for (let i = 0; i < 2; i += 1) {
+for (let j = 0; j < 3; j += 1) {
+  console.log(`${i}-${j}`);
+}
+}</code></pre>
+            </li>
+
+            <li><b>Break</b> 
+                <pre class="language-js"><code> for (let i = 0; i < 99; i += 1) {
+if (i > 5) {
+    break;
+}
+console.log(i)
+}
+// => 0 1 2 3 4 5</code></pre>
+            </li>
+
+            <li><b>for... of loop</b> 
+                <pre class="language-js"><code>const fruits = ["apple", "orange", "banana"];
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+// => apple
+// => orange
+// => banana</code></pre>
+            </li>
+
+            <li><b>for... in loop</b> 
+                <pre class="language-js"><code> const fruits = ["apple", "orange", "banana"];
+
+for (let index in fruits) {
+  console.log(index);
+}
+// => 0
+// => 1
+// => 2</code></pre>
+            </li>
+
+            <li><b>JavaScript Iterators</b> :Function Assign to Variables
+                <pre class="language-js"><code> let plusFive = (number) => {
+  return number + 5;  
+};
+// f is assigned the value of plusFive
+let f = plusFive;
+                  
+plusFive(3); // 8
+// Since f has a function value, it can be invoked. 
+f(9); // 14</code></pre>
+            </li>
+
+            <li><b>Callback Function</b> 
+                <pre class="language-js"><code>const isEven = (n) => {
+  return n % 2 == 0;
+}
+
+let printMsg = (evenFunc, num) => {
+  const isNumEven = evenFunc(num);
+  console.log(`${num} is an even number: ${isNumEven}.`)
+}
+                  
+// Pass in isEven as the callback function
+printMsg(isEven, 4); 
+// => The number 4 is an even number: True.</code></pre>
+            </li>
+
+            <li><b>Array Method.Reduce()</b> 
+                <pre class="language-js"><code> const numbers = [1, 2, 3, 4];
+
+const sum = numbers.reduce((accumulator, curVal) => {  
+  return accumulator + curVal;
+});
+
+console.log(sum); // 10</code></pre>
+            </li>
+
+            <li><b>Array Method.map()</b> 
+                <pre class="language-js"><code>const members = ["Taylor", "Donald", "Don", "Natasha", "Bobby"];
+const announcements = members.map((member) => {
+  return member + " joined the contest.";
+});
+                    
+console.log(announcements);</code></pre>
+            </li>
+
+            <li><b>Array Method.forEach()</b> 
+                <pre class="language-js"><code>const numbers = [28, 77, 45, 99, 27];
+numbers.forEach(number => {  
+  console.log(number);
+}); </code></pre>
+            </li>
+
+            <li><b>Array Method.filter()</b> 
+                <pre class="language-js"><code>const randomNumbers = [4, 11, 42, 14, 39];
+const filteredArray = randomNumbers.filter(n => {  
+  return n > 5;
+});</code></pre>
+            </li>
+
+            <li><b>JavaScript Object:</b> Accessing Properties  
+                <pre class="language-js"><code>const randomNumbers = [4, 11, 42, 14, 39];
+const filteredArray = randomNumbers.filter(n => {  
+  return n > 5;
+});</code></pre>
+            </li>
+
+            <li><b>Naming Properties</b> 
+                <pre class="language-js"><code>// Example of invalid key names
+const trainSchedule = {
+  // Invalid because of the space between words.
+  platform num: 10, 
+  // Expressions cannot be keys.
+  40 - 10 + 2: 30,
+  // A + sign is invalid unless it is enclosed in quotations.
+  +compartment: 'C'
+}                    </code></pre>
+            </li>
+
+            <li><b>Non Existent Properties</b> 
+                <pre class="language-js">const classElection = {
+  date: 'January 12'
+};
+
+console.log(classElection.place); // undefined<code> </code></pre>
+            </li>
+
+            <li><b>Mutable</b> 
+                <pre class="language-js"><code>const student = {
+  name: 'Sheldon',
+  score: 100,
+  grade: 'A',
+}
+                  
+console.log(student)
+// { name: 'Sheldon', score: 100, grade: 'A' }
+                  
+delete student.score
+student.grade = 'F'
+console.log(student)
+// { name: 'Sheldon', grade: 'F' }
+                  
+student = {}
+// TypeError: Assignment to constant variable.</code></pre>
+            </li>
+
+            <li><b>Assignment Shorthand Syntax</b> 
+                <pre class="language-js"><code>const person = {
+  name: 'Tom',
+  age: '22',
+};
+const {name, age} = person;
+console.log(name); // 'Tom'
+console.log(age);  // '22'
+</code></pre>
+            </li>
+
+            <li><b>Delete Operators</b> 
+                <pre class="language-js"><code>const person = {
+  firstName: "Matilda",
+  age: 27,
+  hobby: "knitting",
+  goal: "learning JavaScript"
+};
+                  
+delete person.hobby; // or delete person[hobby];
+                  
+console.log(person);
+/*
+{
+  firstName: "Matilda"
+  age: 27
+  goal: "learning JavaScript"
+}
+*/</code></pre>
+            </li>
+
+            <li><b>Objects As Arguments</b> 
+                <pre class="language-js"><code>const origNum = 8;
+const origObj = {color: 'blue'};
+                    
+const changeItUp = (num, obj) => {
+  num = 7;
+  obj.color = 'red';
+};
+                    
+changeItUp(origNum, origObj);
+                    
+// Will output 8 since integers are passed by value.
+console.log(origNum);
+                    
+// Will output 'red' since objects are passed 
+// by reference and are therefore mutable.
+console.log(origObj.color);</code></pre>
+            </li>
+
+            <li><b>Shorthand object creation</b> 
+                <pre class="language-js"><code>const activity = 'Surfing';
+const beach = { activity };
+console.log(beach); // { activity: 'Surfing' }</code></pre>
+            </li>
+
+            <li><b>This Keyword</b> 
+                <pre class="language-js"><code>const cat = {
+  name: 'Pipey',
+  age: 8,
+  whatName() {
+    return this.name  
+  }
+};
+console.log(cat.whatName()); // => Pipey
+</code></pre>
+            </li>
+
+            <li><b>Factory Functions</b>
+                <pre class="language-js"><code>// A factory function that accepts 'name', 
+// 'age', and 'breed' parameters to return 
+// a customized dog object. 
+const dogFactory = (name, age, breed) => {
+  return {
+    name: name,
+    age: age,
+    breed: breed,
+    bark() {
+      console.log('Woof!');  
+    }
+  };
+};</code></pre>
+            </li>
+
+            <li><b>Methods</b> 
+                <pre class="language-js"><code>const engine = {
+  // method shorthand, with one argument
+  start(adverb) {
+    console.log(`The engine starts up ${adverb}...`);
+  },  
+  // anonymous arrow function expression with no arguments
+  sputter: () => {
+    console.log('The engine sputters...');
+  },
+};
+                  
+engine.start('noisily');
+engine.sputter();</code></pre>
+            </li>
+
+            <li><b>Getter and Setters</b> 
+                <pre class="language-js"><code>const myCat = {
+  _name: 'Dottie',
+  get name() {
+    return this._name;  
+  },
+  set name(newName) {
+    this._name = newName;  
+  }
+};
+                  
+// Reference invokes the getter
+console.log(myCat.name);
+                  
+// Assignment invokes the setter
+myCat.name = 'Yankee';</code></pre>
+            </li>
+
+            <li><b>JavaScript Classes:</b>Static methods 
+                <pre class="language-js"><code>class Dog {
+  constructor(name) {
+    this._name = name;  
+  }
+                    
+  introduce() { 
+    console.log('This is ' + this._name + ' !');  
+  }
+                    
+  // A static method
+  static bark() {
+    console.log('Woof!');  
+  }
+}
+                  
+const myDog = new Dog('Buster');
+myDog.introduce();
+                  
+// Calling the static method
+Dog.bark();
+</code></pre>
+            </li>
+
+            <li><b>Class</b> 
+                <pre class="language-js"><code>class Song {
+  constructor() {
+    this.title;
+    this.author;
+  }
+                    
+  play() {
+    console.log('Song playing!');
+  }
+}
+                  
+const mySong = new Song();
+mySong.play();
+</code></pre>
+            </li>
+
+            <li><b>Class Constructor</b> 
+                <pre class="language-js"><code>class Song {
+  constructor(title, artist) {
+    this.title = title;
+    this.artist = artist;
+  }
+}
+
+const mySong = new Song('Bohemian Rhapsody', 'Queen');
+console.log(mySong.title);</code></pre>
+            </li>
+
+            <li><b>Class methods</b> 
+                <pre class="language-js"><code>class Song {
+  play() {
+    console.log('Playing!');
+  }
+                    
+  stop() {
+    console.log('Stopping!');
+  }
+}</code></pre>
+            </li>
+
+            <li><b>Extends</b> 
+                <pre class="language-js"><code>// Parent class
+class Media {
+  constructor(info) {
+    this.publishDate = info.publishDate;
+    this.name = info.name;
+  }
+}
+                    
+// Child class
+class Song extends Media {
+  constructor(songData) {
+    super(songData);
+    this.artist = songData.artist;
+  }
+}
+                    
+const mySong = new Song({ 
+  artist: 'Queen', 
+  name: 'Bohemian Rhapsody', 
+  publishDate: 1975
+});</code></pre>
+            </li>
+
+            <li><b>JavaScript Modules:</b>Export 
+                <pre class="language-js"><code>// myMath.js
+
+// Default export
+export default function add(x,y){
+    return x + y
+}
+
+// Normal export
+export function subtract(x,y){
+    return x - y
+}
+
+// Multiple exports
+function multiply(x,y){
+    return x * y
+}
+function duplicate(x){
+    return x * 2
+}
+export {
+                        multiply,
+                        duplicate
+}</code></pre>
+            </li>
+
+            <li><b>Import</b> 
+                <pre class="language-js"><code>// main.js
+import add, { subtract, multiply, duplicate } from './myMath.js';
+                    
+console.log(add(6, 2)); // 8 
+console.log(subtract(6, 2)) // 4
+console.log(multiply(6, 2)); // 12
+console.log(duplicate(5)) // 10
+</code></pre>
+            </li>
+
+            <li><b>Export Module</b> 
+                <pre class="language-js"><code>// myMath.js
+
+function add(x,y){
+    return x + y
+}
+function subtract(x,y){
+    return x - y
+}
+function multiply(x,y){
+    return x * y
+}
+function duplicate(x){
+    return x * 2
+}
+                    
+// Multiple exports in node.js
+module.exports = {
+    add,
+    subtract,
+    multiply,
+    duplicate
+}</code></pre>
+            </li>
+
+            <li><b>Require Module</b> 
+                <pre class="language-js"><code>// main.js
+const myMath = require('./myMath.js')
+                    
+console.log(myMath.add(6, 2)); // 8 
+console.log(myMath.subtract(6, 2)) // 4
+console.log(myMath.multiply(6, 2)); // 12
+console.log(myMath.duplicate(5)) // 10</code></pre>
+            </li>
+
+            <li><b>JavaScript Promises:</b> Promise States 
+                <pre class="language-js"><code>const promise = new Promise((resolve, reject) => {
+  const res = true;
+  // An asynchronous operation.
+  if (res) {
+    resolve('Resolved!');
+  }
+  else {
+    reject(Error('Error'));
+  }
+});
+                  
+promise.then((res) => console.log(res), (err) => console.error(err));</code></pre>
+            </li>
+
+            <li><b>Executor Function</b> 
+                <pre class="language-js"><code>const executorFn = (resolve, reject) => {
+  resolve('Resolved!');
+};
+                  
+const promise = new Promise(executorFn);
+</code></pre>
+            </li>
+
+            <li><b>Set Timeout()</b> 
+                <pre class="language-js"><code>const loginAlert = () =>{
+  console.log('Login');
+};
+                  
+setTimeout(loginAlert, 6000);</code></pre>
+            </li>
+
+            <li><b>.then() method</b> 
+                <pre class="language-js"><code>const promise = new Promise((resolve, reject) => {    
+  setTimeout(() => {
+    resolve('Result');
+  }, 200);
+});
+                  
+promise.then((res) => {
+  console.log(res);
+}, (err) => {
+  console.error(err);
+});</code></pre>
+            </li>
+
+            <li><b>.catch() method</b> 
+                <pre class="language-js"><code>
+const promise = new Promise((resolve, reject) => {  
+    setTimeout(() => {
+      reject(Error('Promise Rejected Unconditionally.'));
+    }, 1000);
+  });
+                      
+  promise.then((res) => {
+    console.log(value);
+  });
+                      
+  promise.catch((err) => {
+    console.error(err);
+  });</code></pre>
+            </li>
+
+            <li><b>promise.all()</b> 
+                <pre class="language-js"><code>const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(3);
+  }, 300);
+});
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(2);
+  }, 200);
+});
+                      
+Promise.all([promise1, promise2]).then((res) => {
+  console.log(res[0]);
+  console.log(res[1]);
+                      
+                </code></pre>
+            </li>
+
+            <li><b>Avoiding nested Promise and .then()</b> 
+                <pre class="language-js"><code>const promise = new Promise((resolve, reject) => {  
+  setTimeout(() => {
+    resolve('*');
+  }, 1000);
+});
+                  
+const twoStars = (star) => {  
+  return (star + star);
+};
+                  
+const oneDot = (star) => {  
+  return (star + '.');
+};
+                  
+const print = (val) => {
+  console.log(val);
+};
+                  
+// Chaining them all together
+promise.then(twoStars).then(oneDot).then(print);
+</code></pre>
+            </li>
+
+            <li><b>creating</b> 
+                <pre class="language-js"><code>const executorFn = (resolve, reject) => {
+  console.log('The executor function of the promise!');
+};
+                  
+const promise = new Promise(executorFn);</code></pre>
+            </li>
+
+            <li><b>Chaining multiple .then</b>
+                <pre class="language-js"><code>const promise = new Promise(resolve => setTimeout(() => resolve('dAlan'), 100));
+
+promise.then(res => {
+  return res === 'Alan' ? Promise.resolve('Hey Alan!') : Promise.reject('Who are you?')
+}).then((res) => {
+  console.log(res)
+}, (err) => {
+  console.error(err)
+});
+</code></pre>
+            </li>
+
+            <li><b>Fake http Request with Promise</b> 
+                <pre class="language-js"><code>const mock = (success, timeout = 1000) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if(success) {
+        resolve({status: 200, data:{}});
+      } else {
+        reject({message: 'Error'});
+      }
+    }, timeout);
+  });
+}
+const someEvent = async () => {
+  try {
+    await mock(true, 1000);
+  } catch (e) {
+    console.log(e.message);
+  }
+}</code></pre>
+            </li>
+
+            <li><b>JavaScript Async-Await</b> Asynchronous
+                <pre class="language-js"><code>function helloWorld() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Hello World!');
+    }, 2000);
+  });
+}
+                  
+const msg = async function() { //Async Function Expression
+  const msg = await helloWorld();
+  console.log('Message:', msg);
+}
+                  
+const msg1 = async () => { //Async Arrow Function
+  const msg = await helloWorld();
+  console.log('Message:', msg);
+}
+                  
+msg(); // Message: Hello World! <-- after 2 seconds
+msg1(); // Message: Hello World! <-- after 2 seconds</code></pre>
+            </li>
+
+            <li><b>Resolving Promises</b> 
+                <pre class="language-js"><code>let pro1 = Promise.resolve(5);
+let pro2 = 44;
+let pro3 = new Promise(function(resolve, reject) {
+  setTimeout(resolve, 100, 'foo');
+});
+                    
+Promise.all([pro1, pro2, pro3]).then(function(values) {
+  console.log(values);
+});
+// expected => Array [5, 44, "foo"]</code></pre>
+            </li>
+
+            <li><b>Async Awaits Promises</b> 
+                <pre class="language-js"><code>function helloWorld() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Hello World!');
+    }, 2000);
+  });
+}
+                  
+async function msg() {
+  const msg = await helloWorld();
+  console.log('Message:', msg);
+}
+                  
+msg(); // Message: Hello World! <-- after 2 seconds
+</code></pre>
+            </li>
+
+            <li><b>Error Handling</b> 
+                <pre class="language-js"><code>let json = '{ "age": 30 }'; // incomplete data
+
+try {
+  let user = JSON.parse(json); // <-- no errors
+  console.log( user.name ); // no name!
+} catch (e) {
+  console.error( "Invalid JSON data!" );
+}</code></pre>
+            </li>
+
+            <li><b>Async Await Operator</b> 
+                <pre class="language-js"><code>function helloWorld() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Hello World!');
+    }, 2000);
+  });
+}
+                  
+async function msg() {
+  const msg = await helloWorld();
+  console.log('Message:', msg);
+}
+                  
+msg(); // Message: Hello World! <-- after 2 seconds</code></pre>
+            </li>
+
+            <li><b>JavaScript Requests:</b> JSON
+                <pre class="language-js"><code>const jsonObj = {
+  "name": "Rick",
+  "id": "11A",
+  "level": 4  
+};</code></pre>
+            </li>
+
+            <li><b>XMLHttpRequest</b> 
+                <pre class="language-js"><code> const xhr = new XMLHttpRequest();
+xhr.open('GET', 'mysite.com/getjson');
+                </code></pre>
+            </li>
+
+            <li><b>Get</b> 
+                <pre class="language-js"><code>const req = new XMLHttpRequest();
+req.responseType = 'json';
+req.open('GET', '/getdata?id=65');
+req.onload = () => {
+  console.log(xhr.response);
+};
+                    
+req.send();</code></pre>
+            </li>
+
+            <li><b>Post</b> 
+                <pre class="language-js"><code>const data = {
+  fish: 'Salmon',
+  weight: '1.5 KG',
+  units: 5
+};
+const xhr = new XMLHttpRequest();
+xhr.open('POST', '/inventory/add');
+xhr.responseType = 'json';
+xhr.send(JSON.stringify(data));
+                  
+xhr.onload = () => {
+  console.log(xhr.response);
+};</code></pre>
+            </li>
+
+            <li><b>fetch api</b> 
+                <pre class="language-js"><code>fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+      'apikey': apiKey
+    },
+    body: data
+  }).then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Request failed!');
+  }, networkError => {
+    console.log(networkError.message)
+  })
+}</code></pre>
+            </li>
+
+            <li><b>JSON Formatted</b> 
+                <pre class="language-js"><code>fetch('url-that-returns-JSON')
+.then(response => response.json())
+.then(jsonResponse => {
+  console.log(jsonResponse);
+});</code></pre>
+            </li>
+
+            <li><b>promise url parameter fetch api</b> 
+                <pre class="language-js"><code>fetch('url')
+                    .then(
+  response  => {
+    console.log(response);
+  },
+ rejection => {
+    console.error(rejection.message);
+);
+</code></pre>
+            </li>
+
+            <li><b>Fetch Api Function</b> 
+                <pre class="language-js"><code>fetch('https://api-xxx.com/endpoint', {
+  method: 'POST',
+ body: JSON.stringify({id: "200"})
+}).then(response => {
+  if(response.ok){
+      return response.json();  
+  }
+    throw new Error('Request failed!');
+}, networkError => {
+  console.log(networkError.message);
+}).then(jsonResponse => {
+  console.log(jsonResponse);
+})</code></pre>
+            </li>
+
+            <li><b>Async Await Syntax</b> 
+                <pre class="language-js"><code>const getSuggestions = async () => {
+  const wordQuery = inputField.value;
+  const endpoint = `${url}${queryParams}${wordQuery}`;
+  try{
+const response = await fetch(endpoint, {cache: 'no-cache'});
+    if(response.ok){
+      const jsonResponse = await response.json()
+    }
+  }
+  catch(error){
+    console.log(error)
+  }
+}</code></pre>
+            </li>
+            <li>
+                <pre class="language-js">Created By: Anjul Rawat!
+ Hope You Enjoy Coding !!!  <code>
+
+            </code></pre></li>
+        </ol>
+    </div>
+</body>
+
+</html>
